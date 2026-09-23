@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75",
             "zIndex": -1,
+            "id": "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -63,6 +63,44 @@
           },
           {
             "position": {
+              "x": -80.0000000000017,
+              "y": -129.999999999993
+            },
+            "size": {
+              "width": 1160,
+              "height": 190
+            },
+            "attrs": {
+              "label": {
+                "text": "Trust Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "60347cc9-c6e1-44fe-b409-5b25cf6a2eef",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "c2be8957-9815-4fa3-8611-4aeaa423289a"
+              ],
+              "containedElements": [
+                "eed782c3-1d25-42c9-94a8-12ddf41bc1c2",
+                "0702db61-96eb-476f-974a-5275e8f654c1",
+                "e11abd63-6e5f-49bf-b244-34290909de51",
+                "d437fdf8-d851-4a59-a031-ddf15309ffd7",
+                "f5965339-1cf3-44bb-9ff8-61f9675337e8",
+                "33a5ec78-f29c-4d85-92e0-15bad84d331a",
+                "c7f01a13-e956-42e5-b55f-6be93edb065f"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": -4.263256414560601e-14,
               "y": -39.99999999999997
             },
@@ -82,6 +120,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -165,7 +204,6 @@
               ]
             },
             "id": "eed782c3-1d25-42c9-94a8-12ddf41bc1c2",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -217,6 +255,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -300,7 +339,6 @@
               ]
             },
             "id": "0702db61-96eb-476f-974a-5275e8f654c1",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Frontend\n(Web - React)",
@@ -372,6 +410,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -455,7 +494,6 @@
               ]
             },
             "id": "e11abd63-6e5f-49bf-b244-34290909de51",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Admin",
@@ -507,6 +545,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -590,7 +629,6 @@
               ]
             },
             "id": "00304d11-1343-48e6-bed4-7bd5c4080abc",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "API\n(Node.js REST)",
@@ -649,6 +687,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -732,7 +771,6 @@
               ]
             },
             "id": "296eb8cd-88bf-4848-8ea0-bb2438503b95",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "Payment Gateaway\n(Midtrans/Xendit)",
@@ -766,6 +804,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -849,7 +888,6 @@
               ]
             },
             "id": "4cdbcbf7-d87f-48e5-b535-46dd3b409e4d",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
               "name": "Customer",
@@ -888,6 +926,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -971,7 +1010,6 @@
               ]
             },
             "id": "1a7373a7-1a93-4514-8a47-3fd6e9d9a386",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "MySQL Database",
@@ -1245,7 +1283,8 @@
               "protocol": "",
               "threats": [],
               "trustBoundaryIds": [
-                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75",
+                "60347cc9-c6e1-44fe-b409-5b25cf6a2eef"
               ]
             },
             "labels": [
@@ -1648,6 +1687,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1731,7 +1771,6 @@
               ]
             },
             "id": "d036aa9e-9bea-46f6-b4cc-d9e986207b6e",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Email Service",
@@ -1793,6 +1832,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1876,7 +1916,6 @@
               ]
             },
             "id": "f72d58c9-5602-4ef2-967f-d4fdf7291527",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "Redis Cache",
@@ -1915,8 +1954,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "d437fdf8-d851-4a59-a031-ddf15309ffd7",
             "zIndex": 13,
+            "id": "d437fdf8-d851-4a59-a031-ddf15309ffd7",
             "data": {
               "type": "tm.Text",
               "name": "T01 - Spoofing",
@@ -1939,8 +1978,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "ec2e76ac-0ab6-49a8-8fb9-08db7c26934e",
             "zIndex": 14,
+            "id": "ec2e76ac-0ab6-49a8-8fb9-08db7c26934e",
             "data": {
               "type": "tm.Text",
               "name": "T03 - Tampering",
@@ -1963,8 +2002,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "f5965339-1cf3-44bb-9ff8-61f9675337e8",
             "zIndex": 15,
+            "id": "f5965339-1cf3-44bb-9ff8-61f9675337e8",
             "data": {
               "type": "tm.Text",
               "name": "T07 - Denial Of Service",
@@ -1987,8 +2026,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "33a5ec78-f29c-4d85-92e0-15bad84d331a",
             "zIndex": 16,
+            "id": "33a5ec78-f29c-4d85-92e0-15bad84d331a",
             "data": {
               "type": "tm.Text",
               "name": "T02 - Spoofing",
@@ -2011,8 +2050,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "186d0189-f317-482e-b886-650b16e6b956",
             "zIndex": 17,
+            "id": "186d0189-f317-482e-b886-650b16e6b956",
             "data": {
               "type": "tm.Text",
               "name": "T06 - Information Disclosure",
@@ -2030,16 +2069,16 @@
             },
             "attrs": {
               "text": {
-                "text": "T06 - Elevation Of Privilege"
+                "text": "T08 - Elevation Of Privilege"
               }
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "c7f01a13-e956-42e5-b55f-6be93edb065f",
             "zIndex": 18,
+            "id": "c7f01a13-e956-42e5-b55f-6be93edb065f",
             "data": {
               "type": "tm.Text",
-              "name": "T06 - Elevation Of Privilege",
+              "name": "T08 - Elevation Of Privilege",
               "hasOpenThreats": false
             }
           },
@@ -2059,8 +2098,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "672cb774-557f-46bc-8aaa-3134e23adb5f",
             "zIndex": 19,
+            "id": "672cb774-557f-46bc-8aaa-3134e23adb5f",
             "data": {
               "type": "tm.Text",
               "name": "T05 - Repuditation",
@@ -2083,8 +2122,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "52c69bb3-e3d7-468e-9341-d0aa02e67282",
             "zIndex": 20,
+            "id": "52c69bb3-e3d7-468e-9341-d0aa02e67282",
             "data": {
               "type": "tm.Text",
               "name": "T04 - Tempering",
@@ -2160,7 +2199,7 @@
             },
             "vertices": [
               {
-                "x": 260,
+                "x": 270,
                 "y": 240
               }
             ]
