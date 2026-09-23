@@ -21,6 +21,44 @@
         "cells": [
           {
             "position": {
+              "x": 166,
+              "y": 80.00000000000227
+            },
+            "size": {
+              "width": 730,
+              "height": 490
+            },
+            "attrs": {
+              "label": {
+                "text": "Trust Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "c2be8957-9815-4fa3-8611-4aeaa423289a",
+                "9dbbbc16-c8db-4927-b30a-b9e400faf4c3",
+                "82947f15-943f-42f6-8bfd-2135aaa39cba",
+                "e013a764-cd46-4cd5-8640-87f4afbecd24"
+              ],
+              "containedElements": [
+                "00304d11-1343-48e6-bed4-7bd5c4080abc",
+                "1a7373a7-1a93-4514-8a47-3fd6e9d9a386",
+                "d036aa9e-9bea-46f6-b4cc-d9e986207b6e",
+                "f72d58c9-5602-4ef2-967f-d4fdf7291527"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": -4.263256414560601e-14,
               "y": -39.99999999999997
             },
@@ -29,6 +67,9 @@
               "height": 90
             },
             "attrs": {
+              "text": {
+                "text": "Customer"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -123,7 +164,7 @@
             "zIndex": 1,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Customer",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -711,8 +752,8 @@
           },
           {
             "position": {
-              "x": 150,
-              "y": 440
+              "x": 250,
+              "y": 450
             },
             "size": {
               "width": 120,
@@ -850,7 +891,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Registrasi / Login /\nPesanan / Pencarian Produk",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -864,7 +905,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Registrasi / Login /\nPesanan / Pencarian Produk"
             ],
             "id": "4c7bcec4-e3bc-4d43-99a5-7dfa43134fad",
             "source": {
@@ -1012,7 +1053,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ]
             },
             "labels": [
               "Data Flow"
@@ -1058,7 +1101,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ]
             },
             "labels": [
               "Data Flow"
@@ -1110,7 +1155,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ]
             },
             "labels": [
               "Data Flow"
@@ -1266,7 +1313,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ]
             },
             "labels": [
               "Data Flow"
@@ -1328,8 +1377,8 @@
             },
             "vertices": [
               {
-                "x": 340,
-                "y": 360
+                "x": 360,
+                "y": 380
               }
             ]
           },
@@ -1381,7 +1430,7 @@
             "vertices": [
               {
                 "x": 310,
-                "y": 340
+                "y": 320
               }
             ]
           },
@@ -1432,8 +1481,8 @@
             },
             "vertices": [
               {
-                "x": 530,
-                "y": 360
+                "x": 540,
+                "y": 380
               }
             ]
           },
@@ -1484,8 +1533,8 @@
             },
             "vertices": [
               {
-                "x": 560,
-                "y": 340
+                "x": 595,
+                "y": 320
               }
             ]
           },
@@ -1608,8 +1657,8 @@
           },
           {
             "position": {
-              "x": 580,
-              "y": 440
+              "x": 535,
+              "y": 450
             },
             "size": {
               "width": 120,
