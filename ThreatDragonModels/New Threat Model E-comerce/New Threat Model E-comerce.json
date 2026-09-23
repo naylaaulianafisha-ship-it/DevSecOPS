@@ -184,6 +184,9 @@
               "height": 90
             },
             "attrs": {
+              "text": {
+                "text": "Frontend\n(Web - React)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -278,7 +281,7 @@
             "zIndex": 2,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Frontend\n(Web - React)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -289,6 +292,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -301,6 +311,9 @@
               "height": 80
             },
             "attrs": {
+              "text": {
+                "text": "Admin"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -395,7 +408,7 @@
             "zIndex": 3,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Admin",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -757,13 +770,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
