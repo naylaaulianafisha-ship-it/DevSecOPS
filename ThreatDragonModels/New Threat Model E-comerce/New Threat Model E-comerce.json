@@ -21,7 +21,7 @@
         "cells": [
           {
             "position": {
-              "x": 160,
+              "x": 180,
               "y": 80
             },
             "size": {
@@ -53,7 +53,11 @@
                 "00304d11-1343-48e6-bed4-7bd5c4080abc",
                 "1a7373a7-1a93-4514-8a47-3fd6e9d9a386",
                 "d036aa9e-9bea-46f6-b4cc-d9e986207b6e",
-                "f72d58c9-5602-4ef2-967f-d4fdf7291527"
+                "f72d58c9-5602-4ef2-967f-d4fdf7291527",
+                "ec2e76ac-0ab6-49a8-8fb9-08db7c26934e",
+                "186d0189-f317-482e-b886-650b16e6b956",
+                "c7f01a13-e956-42e5-b55f-6be93edb065f",
+                "672cb774-557f-46bc-8aaa-3134e23adb5f"
               ]
             }
           },
@@ -1164,7 +1168,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Order / Payment Request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1178,7 +1182,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Order / Payment Request"
             ],
             "id": "ff2242fb-7571-48e0-a208-ab040acee056",
             "source": {
@@ -1969,6 +1973,174 @@
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
+            }
+          },
+          {
+            "position": {
+              "x": 13.749999999999957,
+              "y": -94.99999999999997
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T01 - Spoofing"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "d437fdf8-d851-4a59-a031-ddf15309ffd7",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Text",
+              "name": "T01 - Spoofing",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 454,
+              "y": 110.00000000000006
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T03 - Tampering"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "ec2e76ac-0ab6-49a8-8fb9-08db7c26934e",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Text",
+              "name": "T03 - Tampering",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 393.75,
+              "y": -84
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T07 - Denial Of Service"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "f5965339-1cf3-44bb-9ff8-61f9675337e8",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Text",
+              "name": "T07 - Denial Of Service",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 829.75,
+              "y": -84
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T02 - Spoofing"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "33a5ec78-f29c-4d85-92e0-15bad84d331a",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Text",
+              "name": "T02 - Spoofing",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 743.5,
+              "y": 115.00000000000006
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T06 - Information Disclosure"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "186d0189-f317-482e-b886-650b16e6b956",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Text",
+              "name": "T06 - Information Disclosure",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 538.75,
+              "y": 500
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T08 - Elevation of Previlege"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "c7f01a13-e956-42e5-b55f-6be93edb065f",
+            "zIndex": 18,
+            "data": {
+              "type": "tm.Text",
+              "name": "T08 - Elevation of Previlege",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 253.75,
+              "y": 500
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "T05 - Repuditation"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "672cb774-557f-46bc-8aaa-3134e23adb5f",
+            "zIndex": 19,
+            "data": {
+              "type": "tm.Text",
+              "name": "T05 - Repuditation",
+              "hasOpenThreats": false
             }
           }
         ]
