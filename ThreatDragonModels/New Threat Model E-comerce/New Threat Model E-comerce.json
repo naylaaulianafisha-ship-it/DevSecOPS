@@ -46,8 +46,8 @@
               "crossingFlows": [
                 "e013a764-cd46-4cd5-8640-87f4afbecd24",
                 "c2be8957-9815-4fa3-8611-4aeaa423289a",
-                "82947f15-943f-42f6-8bfd-2135aaa39cba",
-                "9dbbbc16-c8db-4927-b30a-b9e400faf4c3"
+                "9dbbbc16-c8db-4927-b30a-b9e400faf4c3",
+                "82947f15-943f-42f6-8bfd-2135aaa39cba"
               ],
               "containedElements": [
                 "00304d11-1343-48e6-bed4-7bd5c4080abc",
@@ -71,8 +71,8 @@
                 "text": "Customer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -169,9 +169,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "61dbbe3b-3cba-431d-9e4e-137ea22ce4a5",
+                  "title": "Credential Theft - Customer Account",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may obtain a customer's username and password and use the stolen credentials to impersonate the legitimate customer. This can allow unauthorized access to the customer's account, personal information, and order history.",
+                  "mitigation": "Use strong password hashing such as bcrypt or Argon2. Enforce HTTPS for authentication traffic, apply login rate limiting, use secure session/token expiration, and consider multi-factor authentication for sensitive accounts.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -188,8 +206,8 @@
                 "text": "Frontend\n(Web - React)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -286,19 +304,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
+              "threats": [
+                {
+                  "id": "6bed5350-9296-4ebc-b200-f539bb1549c5",
+                  "title": "API Request Flooding",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker may send a large number of requests to the Node.js REST API in a short period of time. Excessive requests can consume server, database, or network resources and make the online store unavailable or slow for legitimate users.",
+                  "mitigation": "Implement rate limiting and request throttling on API endpoints. Use Redis Cache to reduce unnecessary database requests, apply pagination to large data requests, limit request sizes, and monitor abnormal traffic patterns.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
               ],
-              "name": null
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -315,8 +348,8 @@
                 "text": "Admin"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -413,9 +446,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1b0c7371-8451-4130-814d-e7fc2c718aa9",
+                  "title": "Admin Account Impersonation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "An attacker may obtain administrator credentials and impersonate a legitimate administrator. Successful impersonation could provide access to administrative functions such as managing products and other sensitive system operations.",
+                  "mitigation": "Require multi-factor authentication for administrator accounts. Use strong password hashing, secure session management, session timeout, login rate limiting, and monitoring of suspicious administrator login activities.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -432,8 +483,8 @@
                 "text": "API\n(Node.js REST)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -530,12 +581,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9ead6ae7-f39b-48cb-8671-8c464e187f7b",
+                  "title": "Order Data Manipulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker may modify order data sent from the React Frontend to the Node.js REST API, including product quantity, product ID, or price. If the server trusts client-side values, the attacker may create an invalid order or obtain an unauthorized price.",
+                  "mitigation": "Do not trust price or total values received from the frontend. Validate product IDs and quantities on the server and recalculate the order total using trusted product data from the MySQL database. Use HTTPS to protect data in transit.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -786,11 +859,13 @@
                 "text": "MySQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -887,13 +962,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d7ac1e0a-9f15-4ae5-8794-2e0f80e9e407",
+                  "title": "Insufficient Transaction and Admin Logging",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "A customer or administrator may deny performing an important action because the system does not maintain sufficient audit records. Without reliable logs, it may be difficult to determine who performed an action, when it occurred, or which data was affected.",
+                  "mitigation": "Implement audit logging for important activities such as login, order creation, payment status changes, product changes, and administrator actions. Record the user ID, action, timestamp, and relevant transaction or resource ID. Protect logs from unauthorized modification.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1480,60 +1575,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Webhook",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
-              ]
-            },
-            "labels": [
-              "Webhook"
-            ],
-            "id": "82947f15-943f-42f6-8bfd-2135aaa39cba",
-            "source": {
-              "cell": "00304d11-1343-48e6-bed4-7bd5c4080abc",
-              "port": "9e65f5b3-96ee-4179-940a-b5413efa8525"
-            },
-            "target": {
-              "cell": "296eb8cd-88bf-4848-8ea0-bb2438503b95",
-              "port": "eaa88db7-10ff-4112-a972-9cce6c1759fa"
-            },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 240
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Payment Request",
               "description": "",
               "outOfScope": false,
@@ -1569,6 +1610,80 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Webhook",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "524fcadb-70a9-4591-b7cf-a064034f6bd8",
+                  "title": "Payment Status Manipulation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An attacker may attempt to manipulate payment information or payment status so that an unpaid order is considered successfully paid. This could result in products or services being provided without a valid payment.",
+                  "mitigation": "Do not trust payment status received from the frontend. Verify payment gateway webhooks or callbacks using the appropriate signature or authentication mechanism. Validate the transaction ID, payment status, and transaction amount before updating the order status.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Webhook"
+            ],
+            "id": "82947f15-943f-42f6-8bfd-2135aaa39cba",
+            "source": {
+              "cell": "00304d11-1343-48e6-bed4-7bd5c4080abc",
+              "port": "9e65f5b3-96ee-4179-940a-b5413efa8525"
+            },
+            "target": {
+              "cell": "296eb8cd-88bf-4848-8ea0-bb2438503b95",
+              "port": "eaa88db7-10ff-4112-a972-9cce6c1759fa"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 240
+              }
+            ]
+          },
+          {
             "position": {
               "x": 756,
               "y": 165.00000000000006
@@ -1582,8 +1697,8 @@
                 "text": "Email Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1680,12 +1795,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "8d487f1b-5f3f-4e70-8c2d-8655ff2481e3",
+                  "title": "Sensitive Customer Data Exposure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "The Node.js REST API may unintentionally expose sensitive customer information through API responses, database queries, error messages, or unauthorized access. Excessive data exposure could reveal personal or account information to unauthorized users.",
+                  "mitigation": "Use HTTPS for data in transit. Apply authorization checks to API endpoints and return only the data required by the client. Never expose passwords or password hashes through API responses. Apply data minimization and use generic error messages that do not reveal sensitive system information.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1702,11 +1839,13 @@
                 "text": "Redis Cache"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1803,13 +1942,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "9414d687-d73f-4cdf-9d65-1fc9643e2789",
+                  "title": "Unauthorized Modification of Administrative Data",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "This threat occurs when an unauthorized user, such as a Customer, attempts to modify administrative data or perform administrative functions through the Node.js REST API. For example, an attacker may attempt to add, modify, or delete product data without having the required administrative privileges.",
+                  "mitigation": "The system should implement Role-Based Access Control (RBAC) and validate the user's role on every administrative endpoint in the Node.js REST API. Administrative functions should follow a deny-by-default policy so that only authorized Admin users can add, modify, or delete product data. Unauthorized requests should be rejected with an appropriate HTTP status code, such as 401 Unauthorized or 403 Forbidden. All administrative data changes should also be recorded in the audit log for monitoring and investigation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           }
         ]
@@ -1817,6 +1976,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto",
-    "threatTop": 0
+    "threatTop": 10
   }
 }
