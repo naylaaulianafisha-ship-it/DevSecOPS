@@ -21,8 +21,8 @@
         "cells": [
           {
             "position": {
-              "x": 180,
-              "y": 80
+              "x": 173.75,
+              "y": 70
             },
             "size": {
               "width": 730,
@@ -56,7 +56,6 @@
                 "f72d58c9-5602-4ef2-967f-d4fdf7291527",
                 "ec2e76ac-0ab6-49a8-8fb9-08db7c26934e",
                 "186d0189-f317-482e-b886-650b16e6b956",
-                "c7f01a13-e956-42e5-b55f-6be93edb065f",
                 "672cb774-557f-46bc-8aaa-3134e23adb5f",
                 "52c69bb3-e3d7-468e-9341-d0aa02e67282"
               ]
@@ -188,11 +187,11 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
-                  "score": ""
+                  "score": "7"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -326,7 +325,20 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 7,
-                  "score": ""
+                  "score": "7"
+                },
+                {
+                  "id": "b4a98e14-cac4-46d2-9c7b-14079f86ea3e",
+                  "title": "Unauthorized Access to Administrative Functions",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "This threat occurs when a Customer or a user with lower privileges attempts to access administrative functions through the Node.js REST API. An attacker may directly access administrative endpoints or manipulate requests sent from the React Frontend. If the API does not properly validate the user's role and authorization, the attacker may gain access to administrative functions such as adding, modifying, or deleting product data.",
+                  "mitigation": "The system should implement Role-Based Access Control (RBAC) and validate the user's role on every administrative endpoint in the Node.js REST API. Authorization must be enforced on the server side and should not rely only on restrictions in the React Frontend. Unauthorized requests should be rejected with an appropriate HTTP status code, such as 401 Unauthorized or 403 Forbidden, and administrative activities should be recorded in the audit log.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "9"
                 }
               ],
               "threatFrequency": {
@@ -334,8 +346,8 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
-                "elevationOfPrivilege": 0
+                "denialOfService": 2,
+                "elevationOfPrivilege": 1
               }
             }
           },
@@ -465,11 +477,11 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 2,
-                  "score": ""
+                  "score": "9"
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -603,12 +615,12 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
-                  "score": ""
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -985,12 +997,12 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
-                  "score": ""
+                  "score": "6"
                 }
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -1200,52 +1212,6 @@
                 "y": 30
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Login Admin / \nKelola Produk",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Login Admin / \nKelola Produk"
-            ],
-            "id": "4d1679a2-65d9-4606-85e5-2617fd36e81d",
-            "source": {
-              "cell": "e11abd63-6e5f-49bf-b244-34290909de51",
-              "port": "092e0782-3b52-4a52-aa21-40997b5ffcf8"
-            },
-            "target": {
-              "cell": "0702db61-96eb-476f-974a-5275e8f654c1",
-              "port": "cd165e62-0f64-49c8-aad6-93d9ddc0d390"
-            }
           },
           {
             "shape": "flow",
@@ -1618,8 +1584,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1635,58 +1600,32 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Webhook",
+              "name": "Login Admin / \nKelola Produk",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [
-                {
-                  "id": "524fcadb-70a9-4591-b7cf-a064034f6bd8",
-                  "title": "Payment Status Manipulation",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "An attacker may attempt to manipulate payment information or payment status so that an unpaid order is considered successfully paid. This could result in products or services being provided without a valid payment.",
-                  "mitigation": "Do not trust payment status received from the frontend. Verify payment gateway webhooks or callbacks using the appropriate signature or authentication mechanism. Validate the transaction ID, payment status, and transaction amount before updating the order status.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": ""
-                }
-              ],
-              "trustBoundaryIds": [
-                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
-              ],
-              "threatFrequency": {
-                "tampering": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
+              "threats": [],
+              "trustBoundaryIds": []
             },
             "labels": [
-              "Webhook"
+              "Login Admin / \nKelola Produk"
             ],
-            "id": "82947f15-943f-42f6-8bfd-2135aaa39cba",
+            "id": "4d1679a2-65d9-4606-85e5-2617fd36e81d",
             "source": {
-              "cell": "00304d11-1343-48e6-bed4-7bd5c4080abc",
-              "port": "9e65f5b3-96ee-4179-940a-b5413efa8525"
+              "cell": "e11abd63-6e5f-49bf-b244-34290909de51",
+              "port": "092e0782-3b52-4a52-aa21-40997b5ffcf8"
             },
             "target": {
-              "cell": "296eb8cd-88bf-4848-8ea0-bb2438503b95",
-              "port": "eaa88db7-10ff-4112-a972-9cce6c1759fa"
+              "cell": "0702db61-96eb-476f-974a-5275e8f654c1",
+              "port": "cd165e62-0f64-49c8-aad6-93d9ddc0d390"
             },
-            "vertices": [
-              {
-                "x": 260,
-                "y": 240
-              }
-            ]
+            "vertices": []
           },
           {
             "position": {
@@ -1817,14 +1756,14 @@
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 6,
-                  "score": ""
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -1844,13 +1783,11 @@
                 "text": "Redis Cache"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1947,29 +1884,15 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": [
-                {
-                  "id": "9414d687-d73f-4cdf-9d65-1fc9643e2789",
-                  "title": "Unauthorized Modification of Administrative Data",
-                  "status": "Open",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "This threat occurs when an unauthorized user, such as a Customer, attempts to modify administrative data or perform administrative functions through the Node.js REST API. For example, an attacker may attempt to add, modify, or delete product data without having the required administrative privileges.",
-                  "mitigation": "The system should implement Role-Based Access Control (RBAC) and validate the user's role on every administrative endpoint in the Node.js REST API. Administrative functions should follow a deny-by-default policy so that only authorized Admin users can add, modify, or delete product data. Unauthorized requests should be rejected with an appropriate HTTP status code, such as 401 Unauthorized or 403 Forbidden. All administrative data changes should also be recorded in the audit log for monitoring and investigation.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": ""
-                }
-              ],
+              "threats": [],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
@@ -2027,7 +1950,7 @@
           {
             "position": {
               "x": 393.75,
-              "y": -84
+              "y": -114
             },
             "size": {
               "width": 112.5,
@@ -2098,8 +2021,8 @@
           },
           {
             "position": {
-              "x": 538.75,
-              "y": 500
+              "x": 393.75,
+              "y": -94.99999999999997
             },
             "size": {
               "width": 112.5,
@@ -2107,7 +2030,7 @@
             },
             "attrs": {
               "text": {
-                "text": "T08 - Elevation of Previlege"
+                "text": "T06 - Elevation Of Privilege"
               }
             },
             "visible": true,
@@ -2116,7 +2039,7 @@
             "zIndex": 18,
             "data": {
               "type": "tm.Text",
-              "name": "T08 - Elevation of Previlege",
+              "name": "T06 - Elevation Of Privilege",
               "hasOpenThreats": false
             }
           },
@@ -2167,12 +2090,86 @@
               "name": "T04 - Tempering",
               "hasOpenThreats": false
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 21,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Webhook",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "524fcadb-70a9-4591-b7cf-a064034f6bd8",
+                  "title": "Payment Status Manipulation",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An attacker may attempt to manipulate payment information or payment status so that an unpaid order is considered successfully paid. This could result in products or services being provided without a valid payment.",
+                  "mitigation": "Do not trust payment status received from the frontend. Verify payment gateway webhooks or callbacks using the appropriate signature or authentication mechanism. Validate the transaction ID, payment status, and transaction amount before updating the order status.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "9"
+                }
+              ],
+              "trustBoundaryIds": [
+                "7b26b8b9-0ddd-4c8a-b781-8ec10a568f75"
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Webhook"
+            ],
+            "id": "82947f15-943f-42f6-8bfd-2135aaa39cba",
+            "source": {
+              "cell": "00304d11-1343-48e6-bed4-7bd5c4080abc",
+              "port": "9e65f5b3-96ee-4179-940a-b5413efa8525"
+            },
+            "target": {
+              "cell": "296eb8cd-88bf-4848-8ea0-bb2438503b95",
+              "port": "eaa88db7-10ff-4112-a972-9cce6c1759fa"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 240
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "April Rustianto",
-    "threatTop": 10
+    "threatTop": 12
   }
 }
